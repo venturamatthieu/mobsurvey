@@ -1,0 +1,9 @@
+ <div>
+    <span><%= checkbox.get('title_question') %><span>
+    <ul>
+        <% _.each(checkbox.checkboxchoices, function(checkboxchoice) { %>
+            <li><%= checkboxchoice.get('title') %></li>
+            <li><%= checkboxchoice.get('description') %></li>
+        <% }); %>
+    </ul>
+ </div>

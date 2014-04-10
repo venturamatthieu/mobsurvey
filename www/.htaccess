@@ -1,0 +1,19 @@
+SetEnv APPLICATION_ENV development
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.html [NC,L]
+
+
+
+#<IfModule mod_expires>
+#	ExpiresActive On
+#	ExpiresDefault « access plus 24 hours »
+#	ExpiresByType text/javascript "modification plus 1 year"
+#	ExpiresByType text/css "modification plus 1 year"
+#	ExpiresByType image/* "modification plus 1 year"
+#</IfModule>
